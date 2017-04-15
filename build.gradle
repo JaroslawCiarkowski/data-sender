@@ -28,6 +28,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile group: 'org.projectlombok', name: 'lombok', version: lombokVersion
 	compile group: 'org.apache.wicket', name: 'wicket-core', version: wicketVersion
+	compile group: 'org.apache.wicket', name: 'wicket-spring', version: wicketVersion
 
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
