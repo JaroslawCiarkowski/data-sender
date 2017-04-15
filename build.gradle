@@ -1,0 +1,33 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.2.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+def lombokVersion = '1.16.16'
+def wicketVersion = '8.0.0-M5'
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile group: 'org.projectlombok', name: 'lombok', version: lombokVersion
+	compile group: 'org.apache.wicket', name: 'wicket-core', version: wicketVersion
+
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
